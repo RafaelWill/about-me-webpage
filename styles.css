@@ -1,0 +1,704 @@
+/* =========================
+Table of Contents
+
+1. Global styles
+2. Typography
+  2.1 Header & Nav
+  2.2 Basic Info & Summary
+  2.3 About Me Page
+  2.4 Skill Page
+3. Layout
+  3.1 Header
+    3.1.1 Navigation
+  3.2 Main
+    3.2.1 Basic Info
+    3.2.2 Summary
+    3.2.3 About Me Page
+    3.2.4 Skill Page
+  3.3 Footer
+4. Components
+  4.1 Divider
+    4.1.1 Diamond Divider
+    4.1.2 Article Divider
+  4.2 Skill Card
+5. Media queries
+  5.1 Tablet
+  5.2 Desktop
+========================= */
+
+/* ===================
+    1. Global Styles
+   =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)),
+  url(images/sand-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+footer {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)),
+  url(images/sand-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* ===================
+    2. Typography
+   =================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #E7931C;
+}
+
+/* 2.1 Header & Nav */
+header,
+nav a {
+  color: #E7931C;
+}
+
+.site-title h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.copyright {
+  color: #fff;
+  font-style: italic;
+  font-size: 0.45rem;
+}
+
+/* 2.2 Basic Info & Summary */
+.basic-info-title,
+.summary-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.subject {
+  color: #1C70E7;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.answer {
+  color: #000;
+  font-size: 0.6rem;
+}
+
+.summary p {
+  line-height: 1.5rem;
+}
+
+.link {
+  color: #E7931C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: rgba(231,147,28,0.5);
+}
+
+/* 2.3 About Me Page */
+h4 {
+  color:  #E7931C;
+  font-size: 1rem;
+}
+
+.articles p {
+  line-height: 1.5rem;
+}
+
+/* ===================
+    3. Layout
+   =================== */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3.1 Header */
+header {
+  width: 100%;
+  height: 230px;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.site-title {
+  margin: 20px 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3.1.1 Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  /* Making the clickable area bigger */
+  display: inline-block;
+  z-index: 1;
+  padding: 1em;
+  margin: -1em;
+  position: relative;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #fff;
+}
+
+.current-page {
+  border-bottom: 2px solid
+}
+
+.current-page:hover {
+  color: #E7931C;
+}
+
+/* 3.2 Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* 3.2.1 Basic Info */
+.section .basic-info {
+  display: flex;
+}
+
+.title-home {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.container-basic-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.avatar-col {
+  order: -1;
+  flex-basis: 100%;
+}
+
+.avatar-col .avatar-image {
+  display: block;
+  margin: auto;
+}
+
+.col-1,
+.col-2 {
+  margin: 20px 20px;
+  text-align: center;
+  flex: 1 1 0;
+}
+
+.answer,
+.subject {
+  margin-bottom: 5px;
+}
+
+/* 3.2.2 Summary */
+.summary {
+  width: 80%;
+  margin: auto;
+}
+
+.summary-title {
+  text-align: center;
+}
+
+.summary p {
+  text-align: justify;
+}
+
+.summary-title,
+.summary p {
+  margin-bottom: 20px;
+}
+
+/* 3.2.3 About Me Page*/
+.title-about-me {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.article-body {
+  width: 80%;
+  margin: auto;
+}
+
+.left-article-title,
+.right-article-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article-body p {
+  text-align: justify;
+}
+
+.image-container {
+  margin-bottom: 20px;
+}
+
+.article-image {
+  display: block;
+  margin: auto;
+}
+
+/* 3.2.3 Skills Page */
+.title-skills {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.container-skill {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.skill-card {
+  width: 180;
+}
+
+.percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.skill-image-container {
+  position: absolute;
+}
+
+.skill-image {
+  display: block;
+  margin: auto;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 3.3 Footer */
+footer {
+  margin: auto;
+  width: 100%;
+  height: 18vh;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon-1,
+.footer-icon-2 {
+  margin: 0 1rem;
+}
+
+.copyright {
+  margin-top: 18px;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+/* ===================
+    4. Components
+  =================== */
+.avatar-image,
+.article-image {
+  border-radius: 50%;
+  border: 5px solid #E7931C;
+}
+
+.article-image {
+  object-fit: cover;
+  height: 350px;
+  width: 350px;
+}
+
+/* 4.1 Divider */
+
+/* 4.1.1 Diamond Divider */
+.diamond-divider {
+  margin: 25px auto;
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+}
+
+.diamond-dividermask {
+  overflow:hidden;
+  height: 20px;
+}
+
+.diamond-dividermask:after {
+  content: '';
+  display: block;
+  margin: -25px auto 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 8px #1C70E7;
+}
+
+.diamond-divider span {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 100%; margin-bottom: -25px;
+  left: 50%; margin-left: -3%;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px #E7931C;
+  background:#fff;
+}
+
+.diamond-divider i {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  left: 4px; right: 4px;
+  border-radius: 100%;
+  border: 1px dashed #E7931C;
+  text-align: center;
+  line-height: 40px;
+  font-style: normal;
+  color: #1C70E7;
+}
+
+/* 4.1.2 Article Divider */
+.article-divider hr {
+  border: none;
+  border-bottom: 2px solid  #1C70E7;
+  width: 80%;
+  height: 0px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+/* 4.2 Skill Card */
+svg {
+  position: static;
+  width: 150px;
+  height: 150px;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #808080;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.skill-card:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 35) / 100);
+  stroke: #E7931C;
+}
+
+.skill-card:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke: #E7931C;
+}
+
+.skill-card:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 30) / 100);
+  stroke: #E7931C;
+}
+
+.skill-card:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke: #E7931C;
+}
+
+.skill-card:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 20) / 100);
+  stroke: #E7931C;
+}
+
+.skill-card:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 25) / 100);
+  stroke: #E7931C;
+}
+
+/* ===================
+    5. Media queries
+   =================== */
+
+/* 5.1 Tablet */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* Header */
+  .container-header {
+    width: 80%;
+    margin: 35px auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-title {
+    text-align: left;
+  }
+
+  nav  {
+    align-items: center;
+    margin-top: 65px;
+  }
+  /* Index */
+  .basic-info-title h2 {
+    width: 80%;
+    margin: 25px auto;
+  }
+  .diamond-divider {
+    width: 80%;
+    margin: 25px auto;
+  }
+
+  .container-basic-info {
+    flex-direction: row;
+    width: 80%;
+    margin: 10px auto;
+    flex-wrap: nowrap;
+  }
+
+  .avatar-col{
+    flex: 2 1 0;
+  }
+
+  .col-1 {
+    text-align: right;
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0;
+  }
+
+  .col-2 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0;
+  }
+
+  .summary {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* About Me */
+
+  /* Skills */
+  .container-skill {
+    width: 80%;
+    margin: auto;
+  }
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-footer {
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+/* 5.2 Desktop */
+@media screen and (min-width: 769px) {
+  /* Header */
+  .container-header {
+    width: 60%;
+    margin: 35px auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-title {
+    text-align: left;
+  }
+
+  nav  {
+    align-items: center;
+    margin-top: 65px;
+  }
+  /* Index */
+  .basic-info-title {
+    width: 60%;
+    margin: 30px auto;
+  }
+
+  .diamond-divider {
+    width: 60%;
+    margin: 25px auto;
+  }
+
+  .container-basic-info {
+    flex-direction: row;
+    width: 60%;
+    margin: 10px auto;
+    flex-wrap: nowrap;
+  }
+
+  .avatar-col{
+    flex: 2 1 0;
+  }
+
+  .col-1 {
+    text-align: right;
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0;
+  }
+
+  .col-2 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0;
+  }
+
+  .summary {
+    width: 60%;
+    margin: auto;
+  }
+  /* About Me */
+  .left-sided-image,
+  .right-sided-image {
+      width: 70%;
+      margin: 20px auto;
+  }
+
+  .left-sided-image {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right-sided-image {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .article-container > * {
+    flex: 1 1 auto;
+  }
+
+  .left-article-title h4,
+  .right-article-title h4 {
+    font-size: 1.8rem;
+    align-items: flex-end;
+  }
+
+  .image-container {
+    margin: auto;
+  }
+
+  .left-sided-image .dividermask {
+    margin: auto;
+  }
+
+  /* Skills */
+  .container-skill {
+    width: 60%;
+    margin: auto;
+  }
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-footer {
+    flex-direction: row-reverse;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
