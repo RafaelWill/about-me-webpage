@@ -300,6 +300,10 @@ main {
   margin: auto;
 }
 
+.article-divider {
+  margin: 10px 0;
+}
+
 /* 3.2.3 Skills Page */
 .title-skills {
   text-align: center;
@@ -580,6 +584,10 @@ svg circle:nth-child(2) {
     margin: auto;
     justify-content: space-between;
   }
+
+  .article-divider {
+    margin: 10px 0;
+  }
 }
 /* 5.2 Desktop */
 @media screen and (min-width: 769px) {
@@ -679,9 +687,6 @@ svg circle:nth-child(2) {
     margin: auto;
   }
 
-  .left-sided-image .dividermask {
-    margin: auto;
-  }
 
   /* Skills */
   .container-skill {
